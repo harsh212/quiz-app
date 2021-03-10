@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import Homepage from './Components/Homepage/Homepage';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+AOS.init();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Homepage />
   </React.StrictMode>,
   document.getElementById('root')
 );
