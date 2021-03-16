@@ -1,22 +1,23 @@
 import React,{Component} from 'react';
 import './Homepage.css'
-import Subjects from '../Subjects/Subjects.js'
+import Subjects from '../Subjects/Subjects.js';
+import {questionData} from "./questions";
 class Homepage extends Component
 {
     render()
     {
         const subjects=[
-            {subjectName:"Computer Network" ,duration:"40 min",questionCount:10,icon:'fas fa-network-wired'},
-            {subjectName:"Operating System" ,duration:"30 min",questionCount:10,icon:'fab fa-windows'},
-            {subjectName:"JavaScript" ,duration:"40 min",questionCount:10,icon:'fab fa-js'}
+            {subjectName:"Computer Network" ,duration:"40 min",questionCount:10,icon:'fas fa-network-wired',url: '/ComputerNetworksQuiz',questions: questionData.CNQuiz},
+            {subjectName:"Operating System" ,duration:"30 min",questionCount:10,icon:'fab fa-windows',url: '/ComputerNetworksQuiz',questions: questionData.OSQuiz},
+            {subjectName:"JavaScript Basics" ,duration:"40 min",questionCount:10,icon:'fab fa-js',url: '/ComputerNetworksQuiz',questions: questionData.JSQuiz}
         ];
         return(
             <div className="background box-overlay container-fluid" data-aos="zoom-in-up" data-aos-delay='200' >
                 <nav className="navbar navbar-expand-lg navbar-light" data-aos="zoom-in" data-aos-delay='500' data-aos-duration="">
-                    <p className="navbar-brand " style={{paddingTop:'10px'}}>
-                        <button className="btn dropdown-toggle" type="button" data-toggle="dropdown" style={{marginRight:'10px'}}>
+                    <p className="navbar-brand " style={{paddingTop:'10px',color:'aliceblue'}}>
+                        <button className="btn dropdown-toggle" type="button" data-toggle="dropdown" data-target="#dropdownmenu" style={{marginRight:'10px'}}>
                             <i className="fas fa-bars " style={{fontSize:'24 px'}}></i>
-                            <ul className="dropdown-menu" >
+                            <ul className="dropdown-menu" id="dropdownmenu">
                                 <h5 className="dropdown-header">Subject Available</h5>
                                 <li className="dropdown-item">Computer Network</li>
                                 <li className="dropdown-item">Operating System</li>
@@ -54,6 +55,16 @@ class Homepage extends Component
                         }
                     </div>
                 </div>
+                <footer className='footer' id="myfooter"data-aos="zoom-in" data-aos-duration="800">
+                <div className="text-center p-3 container-fluid">
+                    © Designed and Developed in Team By 
+                    <ul className="list-group list-group-flush">
+                        <li className="list-group-item">Ayush Mishra 18103215</li> 
+                        <li className="list-group-item">Harsh Shukla 18103252</li>
+                        <li className="list-group-item">Ishita Gupta 18103254</li>
+                    </ul>
+                </div>
+                </footer>
             </div>
         );
     }

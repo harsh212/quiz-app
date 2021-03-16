@@ -13,6 +13,15 @@
   text-align: center;
   align-content: center;
 }
+.sub
+{
+  padding-left: 100px;
+}
+.start-icon
+{
+  float:right;
+  margin-top: 100px;;
+}
   .cl0
   {
     float: right;
@@ -20,7 +29,7 @@
   .cl1
   {
     float: left;
-  }
+  } 
   .sub-box i
   {
     margin-top: 15px;
@@ -44,4 +53,22 @@
   .sub-box:hover .overlay {
     opacity: 1;
   }
-    
+  @media only screen and (max-width: 800px) 
+{
+    .sub-box
+    {
+      width: 100%;
+    }
+    .cl0
+    {
+      float: left;
+    }
+    .cl1
+    {
+      float: right;
+    }
+    .sub-box .overlay
+    {
+      display: none;
+    }
+}
