@@ -1,5 +1,5 @@
 # Live Demo
-  [Click here] (https://quiz-application1.web.app/)
+  [Click here](https://quiz-application1.web.app/)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
